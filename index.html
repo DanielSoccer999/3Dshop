@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyPrint | AI-Powered 3D Models</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">PolyPrint</div>
+        <div class="search-box">
+            <select id="category-filter">
+                <option value="all">All Departments</option>
+                <option value="tabletop">Tabletop Gaming</option>
+                <option value="home">Home Decor</option>
+                <option value="gadgets">Gadgets</option>
+            </select>
+            <input type="text" id="ai-search-input" placeholder="Describe what you want to print...">
+            <button id="search-btn"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <span>Hello, Sign in</span>
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+    </nav>
+
+    <main>
+        <section class="recommendations">
+            <h2>Recommended based on your interests</h2>
+            <div class="product-grid" id="ai-results">
+                </div>
+        </section>
+
+        <section class="main-feed">
+            <h3>Trending 3D Prints</h3>
+            <div class="product-grid" id="main-grid">
+                </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
