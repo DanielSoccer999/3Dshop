@@ -1,0 +1,20 @@
+const products = [
+    { id: 1, name: "Dice Tower", category: "tabletop", price: 12.99, img: "tower.jpg" },
+    { id: 2, name: "Self-Watering Planter", category: "home", price: 8.50, img: "planter.jpg" },
+    { id: 3, name: "Phone Stand", category: "gadgets", price: 5.00, img: "stand.jpg" }
+];
+
+function renderProducts(items, elementId) {
+    const container = document.getElementById(elementId);
+    container.innerHTML = items.map(item => `
+        <div class="product-card">
+            <img src="assets/${item.img}" alt="${item.name}">
+            <h4>${item.name}</h4>
+            <p>$${item.price}</p>
+            <button>Add to Cart</button>
+        </div>
+    `).join('');
+}
+
+// Initial Render
+renderProducts(products, 'main-grid');
